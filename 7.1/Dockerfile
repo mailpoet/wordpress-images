@@ -9,7 +9,7 @@ RUN sudo apt-get update; \
   sudo rm /etc/apt/preferences.d/no-debian-php; \
   sudo apt-get update; \
   sudo apt-get install mysql-client php7.0-mysql zlib1g-dev; \
-  sudo docker-php-ext-install mysqli pdo pdo_mysql zip; \
+  sudo docker-php-ext-install bcmath mysqli pdo pdo_mysql zip; \
   \
 # Install NodeJS + NPM
   curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -; \
@@ -17,4 +17,8 @@ RUN sudo apt-get update; \
   \
 # Install WP-CLI
   sudo curl -o /usr/local/bin/wp https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar; \
-  sudo chmod +x /usr/local/bin/wp;
+  sudo chmod +x /usr/local/bin/wp; \
+  \
+# Clean up
+  sudo apt-get clean && \
+  sudo rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*;
