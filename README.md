@@ -7,8 +7,8 @@ You can find prebuilt images on Docker Hub: [mailpoet/wordpress](https://hub.doc
 
 ### PHP
 
-- PHP 5.6.30
-- PHP 7.1
+- PHP 5.6.30, based on `circleci/php:5.6.30-apache-browsers`
+- PHP 7.1, based on `circleci/php:7.1-apache-browsers`
 
 Extensions:
 
@@ -23,9 +23,13 @@ Packages:
 - npm
 - wp-cli
 
+### PHP 5.6-cli
+
+Smaller copy of PHP 5.6.30, based on `php:5.6-cli`
+
 ### WordPress
 
-- WordPress 4.9.5 + Apache
+- WordPress 4.9.5 + Apache, based on `wordpress:latest`
 
 ## Usage
 
