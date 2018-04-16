@@ -7,7 +7,7 @@ RUN sudo apt-get update; \
   echo "date.timezone = UTC" | sudo tee -a /usr/local/etc/php/php.ini; \
   \
 # Install NodeJS + NPM
-  curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -; \
+  curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -; \
   sudo apt-get install nodejs build-essential; \
   \
 # Install WP-CLI

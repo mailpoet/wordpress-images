@@ -19,7 +19,7 @@ Extensions:
 
 Packages:
 
-- nodejs 6.x
+- nodejs 9.x
 - npm
 - wp-cli
 
