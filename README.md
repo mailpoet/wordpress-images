@@ -33,5 +33,5 @@ Smaller copy of PHP 5.6.30, based on `php:5.6-cli`
 
 ## Usage
 
-- `make build`: to build target Docker images locally
-- `make push`: to push them to the target `mailpoet/wordpress` repository
+- `make build version=20180417.1`: to build target Docker images locally
+- `make push version=20180417.1`: to push them to the target `mailpoet/wordpress` repository
