@@ -8,8 +8,8 @@ RUN sudo apt-get update; \
 # ref: https://github.com/docker-library/php/pull/542
   sudo rm /etc/apt/preferences.d/no-debian-php; \
   sudo apt-get update; \
-  sudo apt-get install mysql-client php7.0-mysql zlib1g-dev; \
-  sudo docker-php-ext-install bcmath mysqli pdo pdo_mysql zip; \
+  sudo apt-get install mysql-client zlib1g-dev libpng-dev; \
+  sudo docker-php-ext-install bcmath mysqli pdo pdo_mysql zip gd; \
   \
 # Install NodeJS + NPM
   curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -; \
