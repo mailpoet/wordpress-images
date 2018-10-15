@@ -1,9 +1,9 @@
-FROM circleci/php:5.6.30-apache-browsers
+FROM circleci/php:5.6.38-jessie-browsers-legacy
 
 # Install required PHP dependencies
 RUN sudo apt-get update; \
-  sudo apt-get install git mysql-client php5-mysql zlib1g-dev libssl-dev; \
-  sudo docker-php-ext-install bcmath mysql mysqli pdo pdo_mysql zip; \
+  sudo apt-get install git apache2 mysql-client zlib1g-dev libssl-dev libpng-dev; \
+  sudo docker-php-ext-install bcmath mysql mysqli pdo pdo_mysql gd zip; \
   echo "date.timezone = UTC" | sudo tee -a /usr/local/etc/php/php.ini; \
   \
 # Install NodeJS + NPM
