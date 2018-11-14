@@ -31,6 +31,10 @@ Smaller copy of PHP 5.6.30, based on `php:5.6-cli`
 
 - WordPress 4.9.5 + Apache, based on `wordpress:latest`
 
+### Dev
+
+- The wordpress image used for MP3 development.
+
 ## Usage
 
 - `make build version=20180417.1`: to build target Docker images locally
