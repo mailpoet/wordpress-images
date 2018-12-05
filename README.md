@@ -23,9 +23,10 @@ Packages:
 - npm
 - wp-cli
 
-### PHP 5.6-cli
+### PHP CLI
 
-Smaller copy of PHP 5.6.30, based on `php:5.6-cli`
+- Smaller copy of PHP 5.6.30, based on `php:5.6-cli`
+- Smaller copy of PHP 7.2.12, based on `php:7.2-cli`
 
 ### WordPress
 
