@@ -1,4 +1,4 @@
-FROM wordpress:4.9-php7.2
+FROM wordpress:5.0-php7.2-apache
 
 RUN apt-get update && \
     apt-get -y install \
