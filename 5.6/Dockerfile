@@ -1,4 +1,4 @@
-FROM circleci/php:5.6.38-jessie-browsers-legacy
+FROM circleci/php:5.6.40-apache-stretch
 
 # Install required PHP dependencies
 RUN sudo apt-get update; \
