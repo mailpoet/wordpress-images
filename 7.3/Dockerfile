@@ -1,7 +1,9 @@
 FROM circleci/php:7.3-apache
 
 RUN sudo apt-get update && \
-  sudo apt-get install mysql-client zlib1g-dev libpng-dev && \
+  sudo apt-get install mysql-client zlib1g-dev libpng-dev libjpeg62-turbo-dev libfreetype6-dev && \
+  sudo docker-php-ext-configure gd --with-gd --with-png-dir --with-jpeg-dir --with-zlib-dir \
+    --with-freetype-dir && \
   sudo docker-php-ext-install bcmath mysqli pdo pdo_mysql zip gd && \
   \
   # Install NodeJS + NPM

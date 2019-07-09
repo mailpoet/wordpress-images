@@ -1,5 +1,5 @@
 build:
-	docker build -t "mailpoet/wordpress:5.6.38_$(version)" 5.6.38
+	docker build -t "mailpoet/wordpress:5.6_$(version)" 5.6
 	docker build -t "mailpoet/wordpress:5.6-cli_$(version)" 5.6-cli
 	docker build -t "mailpoet/wordpress:7.1_$(version)" 7.1
 	docker build -t "mailpoet/wordpress:7.3_$(version)" 7.3
@@ -8,7 +8,7 @@ build:
 	docker build -t "mailpoet/wordpress:dev_$(version)" dev
 
 push:
-	docker push mailpoet/wordpress:5.6.38_$(version)
+	docker push mailpoet/wordpress:5.6_$(version)
 	docker push mailpoet/wordpress:5.6-cli_$(version)
 	docker push mailpoet/wordpress:7.1_$(version)
 	docker push mailpoet/wordpress:7.3_$(version)
