@@ -5,6 +5,7 @@ build:
 	docker build -t "mailpoet/wordpress:7.3_$(version)" 7.3
 	docker build -t "mailpoet/wordpress:wp-4.9.5_$(version)" wp-4.9.5
 	docker build -t "mailpoet/wordpress:wp-5.0_$(version)" wp-5.0
+	docker build -t "mailpoet/wordpress:wp-5.3_$(version)" wp-5.3
 	docker build -t "mailpoet/wordpress:dev_$(version)" dev
 
 push:
@@ -14,4 +15,5 @@ push:
 	docker push mailpoet/wordpress:7.3_$(version)
 	docker push mailpoet/wordpress:wp-4.9.5_$(version)
 	docker push mailpoet/wordpress:wp-5.0_$(version)
+	docker push mailpoet/wordpress:wp-5.3_$(version)
 	docker push mailpoet/wordpress:dev_$(version)
