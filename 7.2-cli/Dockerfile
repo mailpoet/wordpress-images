@@ -6,7 +6,7 @@ RUN apt-get update && \
             zlib1g-dev \
             libpng-dev \
             libssl-dev \
-            mysql-client \
+            default-mysql-client \
             sudo less  \
         --no-install-recommends && \
     apt-get clean && \
