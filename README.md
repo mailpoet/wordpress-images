@@ -7,7 +7,6 @@ You can find prebuilt images on Docker Hub: [mailpoet/wordpress](https://hub.doc
 
 ### PHP
 
-- PHP 7.0, based on `circleci/php:7.0-apache`
 - PHP 7.1, based on `circleci/php:7.1-apache-browsers`
 - PHP 7.4, based on `circleci/php:7.4-apache`
 
@@ -40,5 +39,13 @@ Packages:
 
 ## Usage
 
-- `make build version=20180417.1`: to build target Docker images locally
-- `make push version=20180417.1`: to push them to the target `mailpoet/wordpress` repository
+First build the image using this command, the second argument is the path to the Dockerfile:
+```
+docker build -t "mailpoet/wordpress:wp-5.3_php7.3_20200617.1" wp-5.3/php7.3
+```
+
+
+After that push the tagged image to the docker hub using this command:
+```
+docker push mailpoet/wordpress:wp-5.3_php7.3_20200617.1
+```

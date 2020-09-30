@@ -1,4 +1,4 @@
-FROM wordpress:5.0-php7.0
+FROM wordpress:5.0-php7.1
 
 RUN docker-php-ext-install pdo_mysql && \
     echo "date.timezone = UTC" >> /usr/local/etc/php/php.ini && \
