@@ -8,6 +8,7 @@ RUN apt-get update && \
             libssl-dev \
             default-mysql-client \
             sudo less  \
+            unzip \
         --no-install-recommends && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
