@@ -6,7 +6,7 @@ RUN sudo apt-get update && \
   sudo docker-php-ext-install bcmath mysqli pdo pdo_mysql zip gd && \
   \
   # Install NodeJS + NPM
-  curl -sL https://deb.nodesource.com/setup_11.x | sudo -E bash - && \
+  curl -sL https://deb.nodesource.com/setup_15.x | sudo -E bash - && \
   sudo apt-get install nodejs build-essential && \
   \
   # Install WP-CLI
