@@ -16,3 +16,5 @@ RUN sudo apt-get update && \
   # Clean up
   sudo apt-get clean && \
   sudo rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+RUN sudo sed -i 's/^zend_extension/;zend_extension/g' /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
