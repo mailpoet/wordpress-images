@@ -45,7 +45,7 @@ docker build -t "mailpoet/wordpress:wp-5.3_php7.3_20200617.1" wp-5.3/php7.3
 ```
 
 
-After that push the tagged image to the docker hub using this command:
+Build multiplatform images and push to the docker hub using this command (more details on PcD9cT-ZO):
 ```
-docker push mailpoet/wordpress:wp-5.3_php7.3_20200617.1
+docker buildx build --platform linux/amd64,linux/arm64 -t "mailpoet/wordpress:wp-5.9_php8.1_20220130.1" wp-5.9/php8.1 --push
 ```
