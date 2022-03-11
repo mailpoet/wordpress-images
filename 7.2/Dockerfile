@@ -1,9 +1,10 @@
-FROM circleci/php:7.2-apache
+FROM cimg/php:7.2
 
 RUN sudo apt-get update && \
-  sudo apt-get install default-mysql-client zlib1g-dev libpng-dev libjpeg62-turbo-dev libfreetype6-dev && \
-  sudo docker-php-ext-configure gd --with-gd --with-png-dir --with-jpeg-dir --with-zlib-dir --with-freetype-dir && \
-  sudo docker-php-ext-install bcmath mysqli pdo pdo_mysql zip gd && \
+  sudo apt-get install default-mysql-client zlib1g-dev libpng-dev libfreetype6-dev && \
+  sudo apt-get install apache2 && \
+  sudo pecl install xdebug && \
+  sudo apt-get install postfix && \
   \
   # Install NodeJS + NPM
   curl -sL https://deb.nodesource.com/setup_15.x | sudo -E bash - && \
@@ -16,3 +17,8 @@ RUN sudo apt-get update && \
   # Clean up
   sudo apt-get clean && \
   sudo rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+RUN sudo mkdir -p /etc/php.d && \
+  echo 'memory_limit = -1' | sudo tee -a /etc/php.d/circleci.ini && \
+  sudo pear config-set php_ini /etc/php.d/circleci.ini && \
+  sudo pecl update-channels
