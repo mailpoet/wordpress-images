@@ -12,6 +12,7 @@ RUN apt-get update && \
             unzip \
             libjpeg62-turbo-dev \
             libfreetype6-dev \
+            msmtp \
         --no-install-recommends && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
@@ -23,4 +24,5 @@ RUN apt-get update && \
         --install-dir=/usr/local/bin && \
     curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar && \
     chmod +x wp-cli.phar && \
-    mv wp-cli.phar /usr/local/bin/wp
+    mv wp-cli.phar /usr/local/bin/wp && \
+    printf "account default\nhost smtp\nport 1025" > /etc/msmtprc
