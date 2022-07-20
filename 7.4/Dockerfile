@@ -5,9 +5,10 @@ RUN sudo apt-get update && \
   sudo docker-php-ext-configure gd --with-jpeg --with-freetype && \
   sudo docker-php-ext-install bcmath mysqli pdo pdo_mysql zip gd && \
   \
-  # Install NodeJS + NPM
-  curl -sL https://deb.nodesource.com/setup_15.x | sudo -E bash - && \
+  # Install NodeJS, enable Corepack
+  curl -sL https://deb.nodesource.com/setup_17.x | sudo -E bash - && \
   sudo apt-get install nodejs build-essential && \
+  sudo corepack enable && \
   \
   # Install WP-CLI
   sudo curl -o /usr/local/bin/wp https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar && \
