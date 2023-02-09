@@ -22,9 +22,9 @@ RUN apt-get update && \
     curl -sS https://getcomposer.org/installer | php -- \
         --filename=composer \
         --install-dir=/usr/local/bin && \
-    curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar && \
-    chmod +x wp-cli.phar && \
-    mv wp-cli.phar /usr/local/bin/wp && \
+    curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli-nightly.phar && \
+    chmod +x wp-cli-nightly.phar && \
+    mv wp-cli-nightly.phar /usr/local/bin/wp && \
     printf "account default\nhost smtp\nport 1025" > /etc/msmtprc && \
     git clone -b "3.2.0RC2" --depth 1 https://github.com/xdebug/xdebug.git /usr/src/php/ext/xdebug \
     && docker-php-ext-configure xdebug --enable-xdebug-dev \
