@@ -1,4 +1,4 @@
-FROM php:8.2.0RC6-cli
+FROM php:8.2-cli
 
 RUN apt-get update && \
     apt-get -y install \
@@ -26,6 +26,6 @@ RUN apt-get update && \
     chmod +x wp-cli.phar && \
     mv wp-cli.phar /usr/local/bin/wp && \
     printf "account default\nhost smtp\nport 1025" > /etc/msmtprc && \
-    git clone -b "3.2.0RC2" --depth 1 https://github.com/xdebug/xdebug.git /usr/src/php/ext/xdebug \
+    git clone -b "3.2.2" --depth 1 https://github.com/xdebug/xdebug.git /usr/src/php/ext/xdebug \
     && docker-php-ext-configure xdebug --enable-xdebug-dev \
     && docker-php-ext-install xdebug
