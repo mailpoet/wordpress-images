@@ -7,7 +7,7 @@ RUN sudo add-apt-repository ppa:ondrej/php -y && \
   sudo pecl install xdebug &&\
   \
   # Install NodeJS, enable Corepack
-  curl -sL https://deb.nodesource.com/setup_19.x | sudo -E bash - && \
+  curl -sL https://deb.nodesource.com/setup_22.x | sudo -E bash - && \
   sudo apt-get install nodejs build-essential && \
   sudo corepack enable && \
   # Install WP-CLI
