@@ -1,13 +1,13 @@
 FROM cimg/php:7.3
 
 RUN sudo apt-get update && \
-  sudo apt-get install default-mysql-client zlib1g-dev libpng-dev libfreetype6-dev && \
-  sudo apt-get install apache2 && \
-  sudo apt-get install postfix && \
+  sudo apt-get install -y default-mysql-client zlib1g-dev libpng-dev libfreetype6-dev && \
+  sudo apt-get install -y apache2 && \
+  sudo apt-get install -y postfix && \
   \
   # Install NodeJS + NPM
   curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash - && \
-  sudo apt-get install nodejs build-essential && \
+  sudo apt-get install -y nodejs build-essential && \
   sudo corepack enable && \
   \
   # Install WP-CLI
